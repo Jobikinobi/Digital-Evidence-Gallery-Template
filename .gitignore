@@ -1,0 +1,122 @@
+# Digital Evidence Gallery Template - Git Ignore
+
+# ==============================================================================
+# EVIDENCE FILES (NEVER COMMIT ACTUAL EVIDENCE)
+# ==============================================================================
+
+# Raw evidence (source files)
+00-SOURCE-EVIDENCE/*/
+!00-SOURCE-EVIDENCE/.gitkeep
+!00-SOURCE-EVIDENCE/*/.gitkeep
+
+# Evidence vault (preserved originals)
+01-EVIDENCE-VAULT/*/
+!01-EVIDENCE-VAULT/.gitkeep
+!01-EVIDENCE-VAULT/*/.gitkeep
+
+# Web-optimized files
+02-WEB-OPTIMIZED/*/
+!02-WEB-OPTIMIZED/.gitkeep
+
+# Website output data files (large)
+03-WEBSITE-OUTPUT/*.json
+03-WEBSITE-OUTPUT/*.html
+!03-WEBSITE-OUTPUT/README.md
+
+# ==============================================================================
+# METADATA & LOGS (CASE-SPECIFIC, NOT IN TEMPLATE)
+# ==============================================================================
+
+# CSV metadata files
+*.csv
+
+# Checksums
+*checksums*.txt
+*_checksums.txt
+
+# Manifests and logs
+*MANIFEST.txt
+*_LOG.txt
+OPTIMIZATION_LOG.txt
+PROCESSING_LOG.txt
+CHAIN_OF_CUSTODY*.txt
+DELIVERY*.txt
+
+# ==============================================================================
+# PYTHON
+# ==============================================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ==============================================================================
+# IDES & EDITORS
+# ==============================================================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ==============================================================================
+# OS FILES
+# ==============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==============================================================================
+# COMPRESSED ARCHIVES
+# ==============================================================================
+
+*.zip
+*.7z
+*.tar.gz
+*.rar
+
+# ==============================================================================
+# TEMPORARY FILES
+# ==============================================================================
+
+*.tmp
+*.temp
+*.log
+.cache/
+
+# ==============================================================================
+# WHAT GETS COMMITTED
+# ==============================================================================
+
+# ✅ Scripts and templates
+# ✅ Documentation
+# ✅ .gitkeep files (preserve empty folders)
+# ✅ Configuration files
+# ✅ README files
+
+# ❌ NO actual evidence
+# ❌ NO case-specific data
+# ❌ NO large generated files
+# ❌ NO sensitive information
